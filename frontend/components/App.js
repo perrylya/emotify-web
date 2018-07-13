@@ -1,6 +1,7 @@
 import React from 'react';
 import PhotoPage from './photopage'
 
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -11,10 +12,9 @@ class App extends React.Component {
         return (
             <div className ='emotify' >
                 <h1 >EMOTIFY</h1>
-                <p>
-                    This is the App component.
+                <div className='photopage'>
                     <PhotoPage /> 
-                </p>
+                </div>
             </div>
         );
     }

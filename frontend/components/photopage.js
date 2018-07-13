@@ -12,16 +12,18 @@ class WebcamCapture extends React.Component {
 
   render() {
     const videoConstraints = {
-      width: 720,
-      height: 720,
+      width: 700,
+      height: 700,
       borderRadius: 720/2,
       borderWidth: 2,
       borderColor: 'black',
       facingMode: 'user',
     };
+    
 
       return (
-      <div>
+      <div> 
+      <div className='photopage'>
         <Webcam
           audio={false}
           height={350}
@@ -30,12 +32,15 @@ class WebcamCapture extends React.Component {
           width={350}
           videoConstraints={videoConstraints}
         />
-        <div>
-          <button onClick={this.capture}>Capture photo</button>
-        </div>
+       
       </div>
+       <div className="buttondiv">
+       <button className='button1' onClick={this.capture}>EMOTIFY</button>
+     </div>
+     </div>
     );
   }
 }
 
 export default WebcamCapture;
+
