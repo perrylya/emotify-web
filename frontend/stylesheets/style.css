@@ -16,12 +16,7 @@ body {
   display:flex;
   justify-content: center;
   align-items:center;
-  padding: 20px
-  width: 300;
-  height: 300;
-  borderRadius: 100;
-  borderWidth: 2;
-  borderColor: 'black';
+  padding: 20px;
 }
 
 .button1{

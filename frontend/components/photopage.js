@@ -60,7 +60,6 @@ class WebcamCapture extends React.Component {
                <button className="button1" onClick={this.capture.bind(this)}>EMOTIFY</button>
              </div>
             </div>
-          </div>
         }
       </div>
     );
