@@ -8,8 +8,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Welcome to React</h1>
+            <div className="home">
+                <h1>EMOTIFY</h1>
                 <p>
                     This is the App component.
                     <PhotoPage />
