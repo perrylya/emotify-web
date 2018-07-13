@@ -2,42 +2,61 @@ import React from 'react';
 import Webcam from 'react-webcam';
 
 class WebcamCapture extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      image: ''
+    }
+  }
   setRef(webcam) {
     this.webcam = webcam;
   }
 
   capture() {
     const imageSrc = this.webcam.getScreenshot();
+      console.log(imageSrc)
+    this.setState({image: imageSrc})
   };
+
+  takeAnotherPhoto() {
+    this.setState({image: ''})
+  }
 
   render() {
     const videoConstraints = {
-      width: 700,
-      height: 700,
-      borderRadius: 720/2,
+      width: 300,
+      height: 300,
+      borderRadius: 100,
       borderWidth: 2,
       borderColor: 'black',
       facingMode: 'user',
     };
-    
 
-      return (
-      <div> 
-      <div className='photopage'>
-        <Webcam
-          audio={false}
-          height={350}
-          ref={this.setRef}
-          screenshotFormat="image/jpeg"
-          width={350}
-          videoConstraints={videoConstraints}
-        />
-       
+    return (
+      <div>
+      {this.state.image ?
+          <div>
+            <img src={this.state.image}/>
+            <div>
+              <button onClick={this.takeAnotherPhoto.bind(this)}>Retake photo</button>
+            </div>
+          </div>
+        :
+          <div>
+            <Webcam
+              audio={false}
+              height={350}
+              ref={this.setRef.bind(this)}
+              screenshotFormat="image/jpeg"
+              width={350}
+              style={videoConstraints}
+            />
+            <div>
+              <button onClick={this.capture.bind(this)}>Capture photo</button>
+            </div>
+          </div>
+        }
       </div>
-       <div className="buttondiv">
-       <button className='button1' onClick={this.capture}>EMOTIFY</button>
-     </div>
-     </div>
     );
   }
 }
