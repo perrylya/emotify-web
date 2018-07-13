@@ -5,10 +5,11 @@ class App extends React.Component {
         super(props);
     }
 
+
     render() {
         return (
-            <div>
-                <h1>Welcome to React</h1>
+            <div className = 'emotify' >
+                <h1>Emotify</h1>
                 <p>
                     This is the App component.
                 </p>
