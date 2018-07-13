@@ -3,7 +3,33 @@ body {
   background-color:#778899
 }
 
-.home {
-  align-items: 'center';
-  justify-content: 'center';
+.emotify{
+  justify-content:'center';
+  align-items:'center';
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.photopage{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  padding: 20px;
+}
+
+.button1{
+  background-color: #b0c4de;
+  color: black;
+  border: 2px solid #e0ffff;
+  padding: 20px 40px;
+}
+
+.button1:hover {opacity: 1}
+
+.buttondiv{
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
