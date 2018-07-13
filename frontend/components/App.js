@@ -8,8 +8,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className = 'emotify' >
-                <h1>Emotify</h1>
+            <div className ='emotify' >
+                <h1 >EMOTIFY</h1>
                 <p>
                     This is the App component.
                 </p>
