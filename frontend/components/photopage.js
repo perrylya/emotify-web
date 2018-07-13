@@ -24,9 +24,8 @@ class WebcamCapture extends React.Component {
 
   render() {
     const videoConstraints = {
-      width: 300,
-      height: 300,
-      borderRadius: 100,
+      width: 400,
+      height: 400,
       borderWidth: 2,
       borderColor: 'black',
       facingMode: 'user',
@@ -35,21 +34,24 @@ class WebcamCapture extends React.Component {
     return (
       <div>
       {this.state.image ?
-          <div 'photopage'>
+          <div> 
+          <div className='photopage'>
             <img src={this.state.image}/>
-            <div className="buttondiv">
-              <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
-            </div>
+           
           </div>
+           <div className="buttondiv">
+           <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
+         </div>
+         </div> 
         :
         <div> 
           <div className='photopage'>
             <Webcam
               audio={false}
-              height={350}
+              height={500}
               ref={this.setRef.bind(this)}
               screenshotFormat="image/jpeg"
-              width={350}
+              width={500}
               style={videoConstraints}
             />
        

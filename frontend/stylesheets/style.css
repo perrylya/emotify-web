@@ -20,12 +20,13 @@ body {
 }
 
 .button1{
-  background-color: white;
+  background-color: #b0c4de;
   color: black;
   border: 2px solid #e0ffff;
   padding: 20px 40px;
-
 }
+
+.button1:hover {opacity: 1}
 
 .buttondiv{
   display: flex;
