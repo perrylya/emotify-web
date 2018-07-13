@@ -12,8 +12,8 @@ class App extends React.Component {
                 <h1>EMOTIFY</h1>
                 <p>
                     This is the App component.
-                    <PhotoPage />
                 </p>
+                <PhotoPage />
             </div>
         );
     }
