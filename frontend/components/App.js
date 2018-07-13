@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoPage from './photopage'
 
 class App extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class App extends React.Component {
                 <h1 >EMOTIFY</h1>
                 <p>
                     This is the App component.
+                    <PhotoPage /> 
                 </p>
             </div>
         );
