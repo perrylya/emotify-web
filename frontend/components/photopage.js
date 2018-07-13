@@ -24,9 +24,8 @@ class WebcamCapture extends React.Component {
 
   render() {
     const videoConstraints = {
-      width: 300,
-      height: 300,
-      borderRadius: 100,
+      width: 400,
+      height: 400,
       borderWidth: 2,
       borderColor: 'black',
       facingMode: 'user',
@@ -34,29 +33,32 @@ class WebcamCapture extends React.Component {
 
     return (
       <div>
-        {this.state.image ?
-          <div className="photopage">
-            <div>
-              <img src={this.state.image}/>
-            </div>
-            <div className="buttondiv">
-              <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
-            </div>
-          </div>
-          :
+      {this.state.image ?
           <div>
-            <div className="photopage">
-              <Webcam
-                audio={false}
-                height={350}
-                ref={this.setRef.bind(this)}
-                screenshotFormat="image/jpeg"
-                width={350}
-                style={videoConstraints}
-              />
-            </div>
-            <div className="buttondiv" >
-              <button className="button1" onClick={this.capture.bind(this)}>EMOTIFY</button>
+          <div className='photopage'>
+            <img src={this.state.image}/>
+
+          </div>
+           <div className="buttondiv">
+           <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
+         </div>
+         </div>
+        :
+        <div>
+          <div className='photopage'>
+            <Webcam
+              audio={false}
+              height={500}
+              ref={this.setRef.bind(this)}
+              screenshotFormat="image/jpeg"
+              width={500}
+              style={videoConstraints}
+            />
+
+             </div>
+               <div className="buttondiv" >
+               <button className="button1" onClick={this.capture.bind(this)}>EMOTIFY</button>
+             </div>
             </div>
           </div>
         }
