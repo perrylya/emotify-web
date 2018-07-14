@@ -28,8 +28,9 @@ class WebcamCapture extends React.Component {
     this.setState({image: ''})
   }
 
-  submitEmotions() {
 
+
+  async playMusic() {
     var image = this.state.image;
     console.log(image);
     axios.post('/image/create', {
@@ -38,8 +39,6 @@ class WebcamCapture extends React.Component {
     .then((res) => {
       console.log(res);
     })
-
-  async playMusic() {
     await this.setState({toPlayerPage: !this.state.toPlayerPage})
     console.log(this.state.toPlayerPage)
   }

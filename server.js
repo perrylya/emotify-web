@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const api = require('./backend/routes');
 const fs = require('fs');
 const bodyParser = require('body-parser');
@@ -45,5 +45,5 @@ app.post('/image/create', function(req,res){
 app.listen(PORT, error => {
     error
     ? console.error(error)
-    : console.info(`==> 🌎 Listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`);
+    : console.info(`==> 🌎 Listening on port ${PORT}. Visit http://localhost:3001/ in your browser.`);
 });
