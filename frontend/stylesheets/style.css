@@ -12,11 +12,11 @@ h1 {
 
 body {
   font-family: Helvetica, Verdana;
-  background: linear-gradient(to bottom right,lightblue, pink);
-  height: 100% ;
-  background-repeat:no-repeat;
   margin: 0;
+  height: 100%;
+  width: 100;
 }
+
 
 .emotify{
   justify-content:center;
@@ -26,6 +26,8 @@ body {
   margin-right: auto;
   display: block;
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 .photopage{

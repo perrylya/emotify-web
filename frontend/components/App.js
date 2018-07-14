@@ -31,7 +31,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="page">
+      <div className="maincontent">
         {this.state.loggedIn ?
           <div className="emotify">
             <div className="header">
