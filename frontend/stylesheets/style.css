@@ -14,7 +14,7 @@ body {
   font-family: Helvetica, Verdana;
   margin: 0;
   height: 100%;
-  width: 100;
+  width: 100%;
 }
 
 
@@ -56,11 +56,18 @@ button {
 }
 
 .webcam {
+  flex:1;
   border-radius: 50%;
   border: 10px white;
   height: 50%;
   width: 50%;
-  opacity: 0.7;
+  opacity: 0.9;
+}
+
+.photopage{
+  display:flex;
+  justify-content:center;
+  align-items: center;
 }
 
 .button1{
