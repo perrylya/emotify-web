@@ -1,11 +1,13 @@
 import React from 'react';
 import Webcam from 'react-webcam';
+import { Redirect } from 'react-router-dom';
 
 class WebcamCapture extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      image: ''
+      image: '',
+      toPlayerPage: false
     }
   }
   setRef(webcam) {
@@ -14,12 +16,16 @@ class WebcamCapture extends React.Component {
 
   capture() {
     const imageSrc = this.webcam.getScreenshot();
-    console.log(imageSrc)
     this.setState({image: imageSrc})
   };
 
   takeAnotherPhoto() {
     this.setState({image: ''})
+  }
+
+  playMusic() {
+    this.setState({toPlayerPage: true})
+    console.log(this.state.toPlayerPage)
   }
 
   render() {
@@ -31,6 +37,10 @@ class WebcamCapture extends React.Component {
       facingMode: 'user',
     };
 
+    if(this.state.toPlayerPage === true) {
+      <Redirect to='/playerpage' />
+    }
+
     return (
       <div>
       {this.state.image ?
@@ -41,6 +51,7 @@ class WebcamCapture extends React.Component {
           </div>
            <div className="buttondiv">
            <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
+           <button className="button1" onClick={this.playMusic.bind(this)}>PLAY MUSIC</button>
          </div>
          </div>
         :
