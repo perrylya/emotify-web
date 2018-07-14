@@ -14,6 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
+    "async-request": "^1.2.0",
+=======
+>>>>>>> 7e29fda2af5f178f11de990f134aed72c32c4f88
     "axios": "^0.18.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
