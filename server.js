@@ -27,12 +27,11 @@ app.post('/image/create', function(req,res){
 
     var apikey = 'PC5A7JaoKp7j0QNovkwN9IN1qXngPub0';
     var apisecret = '9ncn_uAkJaWx2rQFWVZrxP3kfUZiONHn'
-    var image = 'http://bb1a8cb1.ngrok.io/pic.jpg';
+    var image = 'http://fbd11f5d.ngrok.io/pic.jpg';
     var data = {};
     var url = `https://api-us.faceplusplus.com/facepp/v3/detect?api_key=${apikey}&api_secret=${apisecret}&image_url=${image}&return_attributes=emotion`
     axios.post(url).then(function(response){
       data = response.data.faces[0].attributes.emotion;
-      console.log(data);
       data = Object.keys(data).reduce(function(a, b){ return data[a] > data[b] ? a : b });
       console.log(data);
     }).catch(function(error){
