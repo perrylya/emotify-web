@@ -1,11 +1,11 @@
 body {
   font-family: Helvetica, Verdana;
-  background-color:#778899
+  background-color:		#E6E6FA
 }
 
 .emotify{
-  justify-content:'center';
-  align-items:'center';
+  justify-content:center;
+  align-items:center;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -16,7 +16,7 @@ body {
   display:flex;
   justify-content: center;
   align-items:center;
-  padding: 20px;
+  padding: 30px
 }
 
 .button1{
@@ -26,10 +26,30 @@ body {
   padding: 20px 40px;
 }
 
-.button1:hover {opacity: 1}
+.button1:hover{opacity: 1}
 
 .buttondiv{
   display: flex;
   justify-content: center;
   align-items:center;
+}
+
+.header{
+  margin: 50px;
+}
+
+.playbar{
+  opacity: 50;
+  height: 200;
+  width: 400;
+  background-color: white ,
+}
+
+#sidebar {
+  display: none;
+  margin: 150px;
+  opacity: 0.5;
+}
+.cart:hover #sidebar {
+  display:block;
 }
