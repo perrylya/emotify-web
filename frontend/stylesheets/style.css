@@ -15,7 +15,7 @@ body {
   background: linear-gradient(to bottom right,lightblue, pink);
   height: 100% ;
   background-repeat:no-repeat;
- 
+  margin: 0;
 }
 
 .emotify{
@@ -114,3 +114,5 @@ h2 {
   margin-right: 0;
   font-weight: bold;
 }
+
+

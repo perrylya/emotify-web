@@ -43,7 +43,7 @@ class WebcamCapture extends React.Component {
   render() {
 
     return (
-      <div style={display:flex}>
+      <div pageName='page'>
         {this.state.toPlayerPage ?
           <Playerpage />
           :
