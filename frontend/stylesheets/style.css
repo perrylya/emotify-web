@@ -1,11 +1,11 @@
 body {
   font-family: Helvetica, Verdana;
-  background-color:#778899
+  /* background-color:#778899 */
 }
 
 .emotify{
-  justify-content:'center';
-  align-items:'center';
+  justify-content:center;
+  align-items:center;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -36,4 +36,11 @@ body {
 
 .header{
   margin: 50px;
+}
+
+.playbar{
+  opacity: 50;
+  height: 200;
+  width: 400;
+  background-color: 'green',
 }

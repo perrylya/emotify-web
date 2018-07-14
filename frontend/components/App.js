@@ -1,6 +1,6 @@
 import React from 'react';
 import PhotoPage from './photopage';
-import Animations from './animations';
+
 
 
 class App extends React.Component {

@@ -14,7 +14,7 @@ class WebcamCapture extends React.Component {
 
   capture() {
     const imageSrc = this.webcam.getScreenshot();
-      console.log(imageSrc)
+    console.log(imageSrc)
     this.setState({image: imageSrc})
   };
 
@@ -34,16 +34,16 @@ class WebcamCapture extends React.Component {
     return (
       <div>
       {this.state.image ?
-          <div> 
+          <div>
           <div className='photopage'>
             <img src={this.state.image}/>
           </div>
            <div className="buttondiv">
            <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
          </div>
-         </div> 
+         </div>
         :
-        <div> 
+        <div>
           <div className='photopage'>
             <Webcam
               audio={false}
@@ -53,7 +53,7 @@ class WebcamCapture extends React.Component {
               width={500}
               style={videoConstraints}
             />
-       
+
              </div>
                <div className="buttondiv" >
                <button className="button1" onClick={this.capture.bind(this)}>EMOTIFY</button>
@@ -66,4 +66,3 @@ class WebcamCapture extends React.Component {
 }
 
 export default WebcamCapture;
-
