@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica, Verdana;
-  /* background-color:#778899 */
+  background-color:		#E6E6FA
 }
 
 .emotify{
@@ -42,5 +42,14 @@ body {
   opacity: 50;
   height: 200;
   width: 400;
-  background-color: 'green',
+  background-color: white ,
+}
+
+#sidebar {
+  display: none;
+  margin: 150px;
+  opacity: 0.5;
+}
+.cart:hover #sidebar {
+  display:block;
 }

@@ -36,11 +36,19 @@ class Playerpage extends React.Component {
     return (
     
       <div> 
-        <div onMouseEnter={this.onMouseEnterHandler.bind(this)}
+        {/* <div onMouseEnter={this.onMouseEnterHandler.bind(this)}
             onMouseLeave={this.onMouseLeaveHandler.bind(this)}>
             {this.state.hover ? <Animations /> : null}   </div> 
            
-           <h1>Hey There</h1>
+           <h1>Hey There</h1> */}
+           <div className="cart">
+           <Animations />
+            <div id="sidebar">
+                <div> 
+                  your playlist
+                </div> 
+              </div>
+            </div>
       </div> 
 
     )
