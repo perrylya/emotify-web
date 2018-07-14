@@ -62,10 +62,10 @@ class WebcamCapture extends React.Component {
               <div className='photopage'>
                 <Webcam
                   audio={false}
-                  // height={400}
+                  height={500}
                   ref={this.setRef.bind(this)}
                   screenshotFormat="image/jpeg"
-                  // width={500}
+                  width={500}
                   className='webcam'
                 />
               </div>
