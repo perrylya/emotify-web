@@ -1,5 +1,7 @@
 import React from 'react';
 import Webcam from 'react-webcam';
+import axios from 'axios';
+
 
 class WebcamCapture extends React.Component {
   constructor(props) {
@@ -22,6 +24,19 @@ class WebcamCapture extends React.Component {
     this.setState({image: ''})
   }
 
+  submitEmotions() {
+
+    var image = this.state.image;
+    console.log(image);
+    axios.post('/image/create', {
+      image: image
+    })
+    .then((res) => {
+      console.log(res);
+    })
+
+  }
+
   render() {
     const videoConstraints = {
       width: 300,
@@ -35,14 +50,15 @@ class WebcamCapture extends React.Component {
     return (
       <div>
       {this.state.image ?
-          <div 'photopage'>
+          <div className = 'photopage'>
             <img src={this.state.image}/>
             <div className="buttondiv">
               <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
+              <button className="button1" onClick={this.submitEmotions.bind(this)}>EMOTIFY</button>
             </div>
           </div>
         :
-        <div> 
+        <div>
           <div className='photopage'>
             <Webcam
               audio={false}
@@ -52,10 +68,10 @@ class WebcamCapture extends React.Component {
               width={350}
               style={videoConstraints}
             />
-       
+
              </div>
                <div className="buttondiv" >
-               <button className="button1" onClick={this.capture.bind(this)}>EMOTIFY</button>
+               <button className="button1" onClick={this.capture.bind(this)}>SELFIE</button>
              </div>
             </div>
         }
@@ -65,4 +81,3 @@ class WebcamCapture extends React.Component {
 }
 
 export default WebcamCapture;
-
