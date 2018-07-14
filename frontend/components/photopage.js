@@ -50,7 +50,7 @@ class WebcamCapture extends React.Component {
           this.state.image ?
             <div>
               <div className='photopage'>
-                <img src={this.state.image}/>
+                <img className='webcam' src={this.state.image}/>
               </div>
               <div className="buttondiv">
                 <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
@@ -62,14 +62,14 @@ class WebcamCapture extends React.Component {
               <div className='photopage'>
                 <Webcam
                   audio={false}
-                  height={400}
+                  // height={400}
                   ref={this.setRef.bind(this)}
                   screenshotFormat="image/jpeg"
-                  width={500}
-                  borderRadius={100}
+                  // width={500}
+                  className='webcam'
                 />
               </div>
-              <div className="buttondiv" >
+              <div>
                 <button className="button1" onClick={this.capture.bind(this)}>TAKE PHOTO</button>
               </div>
             </div>

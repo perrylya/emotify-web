@@ -53,23 +53,29 @@ button {
   margin-top: 5px;
 }
 
+.webcam {
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
 .button1{
   background-color: #b0c4de;
+  font-weight: bold;
   color: black;
   border: 2px solid #e0ffff;
   padding: 20px 40px;
+  justify-content: center;
 }
 
 .button1:hover{opacity: 1}
 
 .buttondiv{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items:center;
 }
 
 .header{
-  margin: 50px;
   display: inline-block;
 }
 
@@ -89,6 +95,7 @@ button {
   display:block;
 }
 
+<<<<<<< HEAD
 .musicbar{
   opacity: 0.7;
   padding: 20px;
@@ -105,3 +112,9 @@ h2 {
   margin-right: 0;
   font-weight: bold;
 }
+=======
+.playerpage{
+  align-content:center;
+  justify-content: center;
+}
+>>>>>>> 698888b18630740440dd0ac14726d6a5c80ba476
