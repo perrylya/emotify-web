@@ -3,11 +3,13 @@ var request = require('request');
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+var requestAsync = require('async-request'), response;
 
 var client_id = 'd64ac9abc7fd4a9c9ab9f83a6739524b'; // Your client id
 var client_secret = '8b24b9e271cf4943acfe0421e3fce991'; // Your secret
 var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 var options;
+var accessToken;
 
 /**
  * Generates a random string containing numbers and letters
@@ -84,6 +86,8 @@ app.get('/callback', function(req, res) {
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
 
+        accessToken = access_token
+
         options = {
           url: 'https://api.spotify.com/v1/users/fkigawa/playlists',
           headers: { 'Authorization': 'Bearer ' + access_token },
@@ -106,10 +110,12 @@ app.get('/callback', function(req, res) {
   }
 });
 
+var newToken;
 app.get('/refresh_token', function(req, res) {
-
+  var newToken = req.query.access_token
   // requesting access token from refresh token
   var refresh_token = req.query.refresh_token;
+
   var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
     headers: { 'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64')) },
@@ -132,25 +138,36 @@ app.get('/refresh_token', function(req, res) {
 
 
 app.get('/getTrack', function(req, res) {
-  var track = [];
+  var allTracks = [];
+  var track = '';
   var emotion = 'happy'
-  request.get(options, function(error, response) {
+  request.get(options, function(error, response, body) {
+    console.log(response)
     for (var i = 0; i < response.body.items.length; i++) {
       if (emotion === response.body.items[i].name) {
-        console.log(track.push(response.body.items[i].uri))
-        track.push(response.body.items[i].tracks)
+        track = response.body.items[i].uri
       }
     }
-    console.log(track)
-    res.json({track: track})
-    // for (var i = 0; i < response.body.items.length; i++) {
-    //       track.push(response.body.items[i].track.uri)
+
+    var playList = track.slice(30)
+
+    // 5kw7HlLGZUfzwPcV2YO44i
+
+    var newOptions = {
+      url: `https://api.spotify.com/v1/users/fkigawa/playlists/{playList}/tracks`,
+      headers: { 'Authorization': 'Bearer ' + accessToken },
+      json: true
+    };
+
+    // {
+    // request.get(newOptions, function(error, responseData) {
+    //   for (var i = 0; i < responseData.body.items.length; i++) {
+    //     allTracks.push(responseData.body.items[i].track.uri)
+    //   }
+    //   console.log(allTracks)
+    //   res.json({track: allTracks})
+    // });
     // }
-    // console.log(track)
-    // res.json({track: track})
-
-    // console.log(response.body.items.length)
-
   });
 })
 

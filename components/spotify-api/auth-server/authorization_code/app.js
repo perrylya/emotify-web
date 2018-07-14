@@ -133,11 +133,14 @@ app.get('/refresh_token', function(req, res) {
 
 app.get('/getTrack', function(req, res) {
   var track;
-  var trackNumber = parseInt(req.query.number)
   // use the access token to access the Spotify Web API
   request.get(options, function(error, response, body) {
-    console.log(body)
+    console.log(response)
+    for (var i = 0; i < body.items.length; i++) {
+      console.log(body.items[i].track.uri)
+    }
     track = body.items[0].track.uri
+    // console.log(track)
     res.json({track: track})
   });
 })

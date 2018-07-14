@@ -25,6 +25,9 @@
       <div id="loggedin">
         <div id="user-profile">
         </div>
+        <div id="oauth">
+        </div>
+        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
       </div>
     </div>
 
@@ -56,7 +59,7 @@
         };
 
         window.onSpotifyWebPlaybackSDKReady = () => {
-          const token = 'BQBK546JIZO6IfPpHLjDMtJouz6ZY5SmozVmzmEVpgFgEKzkGEgdPsp4khQLWMrYl5fD3fwwP7QgCA6FqBiRD0F7lZG8cdxa4D3lXeO_L0gmUShcZUpvqU_m6kwVkWDxnBZEkEnsYAiG6YCQ2FWGihBPBwfrhxhGjw';
+          const token = 'BQAXlZGWrHLeVlI1Q0PjQp2nfu1-i97c5oOeYr-7LT8325PAxpU55RVUw3RZ3OdE5ZrEPZayzt5_Sm6sgFjIjWNDHllt925N8fqyk_pm_U4xmMCkx8SZRZnQDqPpnAnQY6bjpVzfK9Eb6jAbF5OFHUqEWFUytukpyw';
           const player = new Spotify.Player({
             name: 'Web Playback SDK Quick Start Player',
             getOAuthToken: cb => { cb(token); }
@@ -77,7 +80,7 @@
             $.ajax('http://localhost:8888/getTrack?number=0', {
               method: 'GET',
               success: function(uri) {
-                console.log('uri!!!', uri.track)
+                console.log('uri!!!', uri)
                 play({
                   playerInstance: player,
                   spotify_uri: uri.track,

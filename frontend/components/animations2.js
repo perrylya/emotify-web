@@ -24,8 +24,8 @@ class Animations2 extends React.PureComponent {
       this.state.items.map((_, i) => (
         <animated.svg
           style={{
-            width: 175,
-            height: 175,
+            width: 150,
+            height: 120,
             willChange: 'transform',
             transform: radians.interpolate(r => `translate3d(0, ${100 * Math.sin(r + i * 2 * Math.PI / 10)}px, 0)`)
           }}

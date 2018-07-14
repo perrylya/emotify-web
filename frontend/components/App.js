@@ -37,15 +37,13 @@ class App extends React.Component {
       <div className="maincontent">
         {this.state.loggedIn ?
           <div className="emotify">
-            <div className="header">
-              <h1>EMOTIFY</h1>
+            
               <PhotoPage />
-            </div>
+        
           </div>
           :
           <div className="emotify">
             <div>
-              <div className="header">
                 <h1>EMOTIFY</h1>
                 <h3>Sign in with your Spotify account</h3>
                 <form className="login">
@@ -53,7 +51,6 @@ class App extends React.Component {
                   <input type="password" placeholder="PASSWORD" onChange={this.handlePasswordChange.bind(this)} value={this.state.password} ></input>
                   <button onClick = {this.handleClick.bind(this)}>LOGIN</button>
                 </form>
-              </div>
             </div>
           </div>
         }
