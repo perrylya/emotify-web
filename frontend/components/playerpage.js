@@ -9,10 +9,3 @@ export default class Visualizer extends React.Component {
     )
   }
 }
-
-//when mouse moves
-export default class MusicPlayer extends React.Component {
-  render() {
-    return ()
-  }
-}
