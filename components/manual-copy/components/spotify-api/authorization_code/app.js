@@ -85,7 +85,7 @@ app.get('/callback', function(req, res) {
             refresh_token = body.refresh_token;
 
         options = {
-          url: 'https://api.spotify.com/v1/users/fkigawa/playlists/5kw7HlLGZUfzwPcV2YO44i/tracks',
+          url: 'https://api.spotify.com/v1/users/fkigawa/playlists',
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
@@ -132,13 +132,25 @@ app.get('/refresh_token', function(req, res) {
 
 
 app.get('/getTrack', function(req, res) {
-  var track;
-  var trackNumber = parseInt(req.query.number)
-  // use the access token to access the Spotify Web API
-  request.get(options, function(error, response, body) {
-    console.log(response)
-    track = body.items[0].track.uri
+  var track = [];
+  var emotion = 'happy'
+  request.get(options, function(error, response) {
+    for (var i = 0; i < response.body.items.length; i++) {
+      if (emotion === response.body.items[i].name) {
+        console.log(track.push(response.body.items[i].uri))
+        track.push(response.body.items[i].tracks)
+      }
+    }
+    console.log(track)
     res.json({track: track})
+    // for (var i = 0; i < response.body.items.length; i++) {
+    //       track.push(response.body.items[i].track.uri)
+    // }
+    // console.log(track)
+    // res.json({track: track})
+
+    // console.log(response.body.items.length)
+
   });
 })
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import Animations from './Animations'
-
+import Animations from './animations'
+import Animations2 from './animations2'
+import screenshot from './images/screenshot.jpg'
 
 //when mouse moves
 
@@ -12,22 +13,6 @@ class Playerpage extends React.Component {
     }
   }
 
-  onMouseEnterHandler(){
-    this.setState({
-      hover: true 
-    })
-    console.log('enter')
-  }
-
-  onMouseLeaveHandler(){
-    this.setState({
-      hover: false
-    })
-    console.log('leave')
-
-  }
-
-
   render() {
     var inner = normal;
     if(this.state.hover) {
@@ -35,16 +20,12 @@ class Playerpage extends React.Component {
     }
     return (
     
-      <div> 
-        {/* <div onMouseEnter={this.onMouseEnterHandler.bind(this)}
-            onMouseLeave={this.onMouseLeaveHandler.bind(this)}>
-            {this.state.hover ? <Animations /> : null}   </div> 
-           
-           <h1>Hey There</h1> */}
-           <div className="cart">
-           <Animations />
+      <div className="playerpage"  > 
+     
+           <div className="cart" style={{background: `linear-gradient(to bottom, #FFB6C1, 	#F0E68C` }}>
+           <Animations2/> 
             <div id="sidebar"> 
-                <div> 
+                <div > 
                   <div> Artist Name:  </div> <br/> 
              
                   <div>  Song Name: </div> 

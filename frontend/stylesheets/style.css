@@ -72,4 +72,13 @@ button {
 }
 .cart:hover #sidebar {
   display:block;
+<<<<<<< HEAD
 }
+=======
+
+}
+.playerpage{
+  align-content:center;
+  justify-content: center;
+}
+>>>>>>> 750a2e0e06c0ebe4750d0859fcb895e3473d4746
