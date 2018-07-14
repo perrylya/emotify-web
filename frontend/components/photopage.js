@@ -43,13 +43,13 @@ class WebcamCapture extends React.Component {
   render() {
 
     return (
-      <div>
+      <div pageName='page'>
         {this.state.toPlayerPage ?
           <Playerpage />
           :
           this.state.image ?
-            <div>
-              <div className='photopage'>
+            <div >
+              <div className='photopage' >
                 <img className='webcam' src={this.state.image}/>
               </div>
               <div className="buttondiv">
@@ -62,10 +62,15 @@ class WebcamCapture extends React.Component {
               <div className='photopage'>
                 <Webcam
                   audio={false}
-                  // height={400}
+<<<<<<< HEAD
+                  ref={this.setRef.bind(this)}
+                  screenshotFormat="image/jpeg"
+=======
+                  // height={500}
                   ref={this.setRef.bind(this)}
                   screenshotFormat="image/jpeg"
                   // width={500}
+>>>>>>> 061eebac5e98c2c8dd2440513fe597ffa7af23d9
                   className='webcam'
                 />
               </div>

@@ -14,7 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "async-request": "^1.2.0",
+=======
+>>>>>>> 7e29fda2af5f178f11de990f134aed72c32c4f88
     "axios": "^0.18.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
@@ -47,6 +50,7 @@
     "sass-loader": "^6.0.3",
     "save": "^2.3.2",
     "semantic-ui": "^2.3.3",
+    "semantic-ui-react": "^0.82.0",
     "style-it": "^2.0.0",
     "style-loader": "^0.16.1",
     "styled-components": "^3.3.3",
