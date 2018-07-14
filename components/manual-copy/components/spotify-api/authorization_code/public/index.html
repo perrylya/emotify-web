@@ -46,7 +46,7 @@
           getOAuthToken(access_token => {
             fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
               method: 'PUT',
-              body: JSON.stringify({ uris: [spotify_uri] }),
+              body: JSON.stringify({ uris: spotify_uri }),
               headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${access_token}`
@@ -56,7 +56,7 @@
         };
 
         window.onSpotifyWebPlaybackSDKReady = () => {
-          const token = 'BQBdjgzwJNtBhTEjeGyuAxXTafZrkFtq0t1XfJEFXGBQQpL5x2RouELV6IMVsDIypHgPhM-62OTOxz6b3_DcCDRblQ983Np1gByhzU2TZOZf8IbY5GDrF5Qy5CHkDkTrRIeQLrkfGaqvM-5BcBLX-YhXwM3KBHumZg';
+          const token = 'BQBK546JIZO6IfPpHLjDMtJouz6ZY5SmozVmzmEVpgFgEKzkGEgdPsp4khQLWMrYl5fD3fwwP7QgCA6FqBiRD0F7lZG8cdxa4D3lXeO_L0gmUShcZUpvqU_m6kwVkWDxnBZEkEnsYAiG6YCQ2FWGihBPBwfrhxhGjw';
           const player = new Spotify.Player({
             name: 'Web Playback SDK Quick Start Player',
             getOAuthToken: cb => { cb(token); }
@@ -77,7 +77,7 @@
             $.ajax('http://localhost:8888/getTrack?number=0', {
               method: 'GET',
               success: function(uri) {
-                console.log('uri!!!', uri)
+                console.log('uri!!!', uri.track)
                 play({
                   playerInstance: player,
                   spotify_uri: uri.track,
