@@ -1,11 +1,8 @@
 import React from 'react';
 import Webcam from 'react-webcam';
-<<<<<<< HEAD
 import axios from 'axios';
 
-=======
 import Playerpage from './Playerpage'
->>>>>>> sisi
 
 class WebcamCapture extends React.Component {
   constructor(props) {

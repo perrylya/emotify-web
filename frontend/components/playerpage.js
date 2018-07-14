@@ -43,7 +43,7 @@ class Playerpage extends React.Component {
            <h1>Hey There</h1> */}
            <div className="cart">
            <Animations />
-            <div id="sidebar"> <div style={backgroundImage: 'http://portugalresident.com/sites/default/files/styles/node-detail/public/field/image/dog_cat.jpg?itok=0gEn3dHN'}> </div> 
+            <div id="sidebar"> 
                 <div> 
                   <div> Artist Name:  </div> <br/> 
              
