@@ -25,8 +25,6 @@ class WebcamCapture extends React.Component {
     this.setState({image: ''})
   }
 
-
-
   async playMusic() {
     var image = this.state.image;
     console.log(image);
