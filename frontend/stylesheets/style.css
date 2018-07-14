@@ -55,7 +55,10 @@ button {
 
 .webcam {
   border-radius: 50%;
-  border: 2px solid black;
+  border: 10px white;
+  height: 50%;
+  width: 50%;
+  opacity: 0.7;
 }
 
 .button1{
