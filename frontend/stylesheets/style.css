@@ -16,7 +16,7 @@ body {
   display:flex;
   justify-content: center;
   align-items:center;
-  padding: 20px
+  padding: 30px
 }
 
 .button1{
@@ -26,10 +26,14 @@ body {
   padding: 20px 40px;
 }
 
-.button1:hover {opacity: 1}
+.button1:hover{opacity: 1}
 
 .buttondiv{
   display: flex;
   justify-content: center;
   align-items:center;
+}
+
+.header{
+  margin: 50px;
 }

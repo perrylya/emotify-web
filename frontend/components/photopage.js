@@ -37,7 +37,6 @@ class WebcamCapture extends React.Component {
           <div> 
           <div className='photopage'>
             <img src={this.state.image}/>
-           
           </div>
            <div className="buttondiv">
            <button className="button1" onClick={this.takeAnotherPhoto.bind(this)}>RETAKE</button>
