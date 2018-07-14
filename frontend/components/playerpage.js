@@ -1,5 +1,6 @@
 import React from 'react';
-import Animations from './Animations'
+import Animations from './animations'
+import Animations2 from './animations2'
 
 
 //when mouse moves
@@ -12,22 +13,6 @@ class Playerpage extends React.Component {
     }
   }
 
-  onMouseEnterHandler(){
-    this.setState({
-      hover: true 
-    })
-    console.log('enter')
-  }
-
-  onMouseLeaveHandler(){
-    this.setState({
-      hover: false
-    })
-    console.log('leave')
-
-  }
-
-
   render() {
     var inner = normal;
     if(this.state.hover) {
@@ -37,8 +22,8 @@ class Playerpage extends React.Component {
     
       <div> 
      
-           <div className="cart">
-           <Animations />
+           <div className="cart" style={{background: `linear-gradient(to bottom, #FFB6C1, 	#F0E68C` }}>
+           <Animations2/> 
             <div id="sidebar"> 
                 <div> 
                   <div> Artist Name:  </div> <br/> 
