@@ -34,15 +34,15 @@ class App extends React.Component {
       <div className="maincontent">
         {this.state.loggedIn ?
           <div className="emotify">
-            
+
               <PhotoPage />
-        
+
           </div>
           :
           <div className="emotify">
             <div>
                 <h1>EMOTIFY</h1>
-                <h3>Sign in with your Spotify account</h3>
+                <h3>Sign in with your Spotify account!</h3>
                 <form className="login">
                   <input placeholder="USERNAME" onChange={this.handleUsernameChange.bind(this)} value={this.state.username}></input>
                   <input type="password" placeholder="PASSWORD" onChange={this.handlePasswordChange.bind(this)} value={this.state.password} ></input>
