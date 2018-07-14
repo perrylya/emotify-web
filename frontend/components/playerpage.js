@@ -43,9 +43,11 @@ class Playerpage extends React.Component {
            <h1>Hey There</h1> */}
            <div className="cart">
            <Animations />
-            <div id="sidebar">
+            <div id="sidebar"> 
                 <div> 
-                  your playlist
+                  <div> Artist Name:  </div> <br/> 
+             
+                  <div>  Song Name: </div> 
                 </div> 
               </div>
             </div>
