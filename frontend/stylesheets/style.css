@@ -38,23 +38,29 @@ button {
   margin-top: 5px;
 }
 
+.webcam {
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
 .button1{
   background-color: #b0c4de;
+  font-weight: bold;
   color: black;
   border: 2px solid #e0ffff;
   padding: 20px 40px;
+  justify-content: center;
 }
 
 .button1:hover{opacity: 1}
 
 .buttondiv{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items:center;
 }
 
 .header{
-  margin: 50px;
   display: inline-block;
 }
 
@@ -72,13 +78,9 @@ button {
 }
 .cart:hover #sidebar {
   display:block;
-<<<<<<< HEAD
 }
-=======
 
-}
 .playerpage{
   align-content:center;
   justify-content: center;
 }
->>>>>>> 750a2e0e06c0ebe4750d0859fcb895e3473d4746
