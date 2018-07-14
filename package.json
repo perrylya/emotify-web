@@ -26,16 +26,11 @@
     "node": "^10.6.0",
     "node-sass": "^4.5.2",
     "prop-types": "^15.5.8",
-<<<<<<< HEAD
-    "react": "^15.6.2",
-    "react-dom": "^15.5.4",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-=======
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-spring": "^5.4.0",
->>>>>>> a2d5f815bb8604f3667976fe6205309607633695
     "react-webcam": "^1.0.1",
     "sass-loader": "^6.0.3",
     "semantic-ui": "^2.3.3",

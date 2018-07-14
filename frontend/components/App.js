@@ -10,7 +10,7 @@ class App extends React.Component {
 
     render() {
         return (
-          <div className="title">
+          <div className="emotify">
             <h1>EMOTIFY</h1>
               <PhotoPage />
           </div>
