@@ -54,3 +54,7 @@ body {
   display:block;
 
 }
+.playerpage{
+  align-content:center;
+  justify-content: center;
+}

@@ -15,7 +15,7 @@ const Container = Keyframes.Spring(async next => {
 class Animations2 extends React.PureComponent {
     constructor(props){
         super(props)
-        this.state = { items: ['item1', 'item2', 'item3', 'item4', 'item5', 'item6','item7', 'item8','item9','item10','item11','item12'] }
+        this.state = { items: ['item1', 'item2', 'item3', 'item4', 'item5', 'item6','item7', 'item8','item9','item10','item11','item12',] }
     }
  
 
@@ -24,8 +24,8 @@ class Animations2 extends React.PureComponent {
       this.state.items.map((_, i) => (
         <animated.svg
           style={{
-            width: 175,
-            height: 175,
+            width: 200,
+            height: 200,
             willChange: 'transform',
             transform: radians.interpolate(r => `translate3d(0, ${100 * Math.sin(r + i * 2 * Math.PI / 12)}px, 0)`)
           }}
