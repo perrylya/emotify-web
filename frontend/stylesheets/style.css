@@ -95,7 +95,6 @@ button {
   display:block;
 }
 
-<<<<<<< HEAD
 .musicbar{
   opacity: 0.7;
   padding: 20px;
@@ -112,9 +111,3 @@ h2 {
   margin-right: 0;
   font-weight: bold;
 }
-=======
-.playerpage{
-  align-content:center;
-  justify-content: center;
-}
->>>>>>> 698888b18630740440dd0ac14726d6a5c80ba476
