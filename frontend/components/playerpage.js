@@ -1,7 +1,6 @@
 import React from 'react';
 import Animations from './animations'
 import Animations2 from './animations2'
-import screenshot from './images/screenshot.jpg'
 
 //when mouse moves
 
