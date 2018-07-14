@@ -1,6 +1,6 @@
 import React from 'react';
 import PhotoPage from './photopage';
-
+import axios from 'axios';
 
 
 class App extends React.Component {
@@ -16,9 +16,12 @@ class App extends React.Component {
   handleClick() {
     if(this.state.username === 'fkigawa' && this.state.password === 'emotify') {
       this.setState({loggedIn: !this.state.loggedIn})
+      window.location.assign('http://localhost:8888')
     } else {
       alert('Incorrect Login Info')
     }
+
+
   }
 
   handleUsernameChange(event) {
@@ -48,7 +51,7 @@ class App extends React.Component {
                 <form className="login">
                   <input placeholder="USERNAME" onChange={this.handleUsernameChange.bind(this)} value={this.state.username}></input>
                   <input type="password" placeholder="PASSWORD" onChange={this.handlePasswordChange.bind(this)} value={this.state.password} ></input>
-                  <button onClick={this.handleClick.bind(this)}>LOGIN</button>
+                  <button onClick = {this.handleClick.bind(this)}>LOGIN</button>
                 </form>
               </div>
             </div>
