@@ -8,11 +8,12 @@ class App extends React.Component {
 
     render() {
         return (
+          <div className="title">
+            <h1>EMOTIFY</h1>
             <div className="emotify">
-                <h1>EMOTIFY</h1>
-               
                 <PhotoPage />
             </div>
+          </div>
         );
     }
 }

@@ -3,9 +3,13 @@ body {
   background-color:#778899
 }
 
+.title{
+  align-items: center;
+}
+
 .emotify{
-  justify-content:'center';
-  align-items:'center';
+  justify-content: center;
+  align-items: center;
   display: flex;
   margin-left: auto;
   margin-right: auto;
