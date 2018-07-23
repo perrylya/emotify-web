@@ -7,9 +7,15 @@ import { Button, Icon } from 'semantic-ui-react';
 class Playerpage extends React.Component {
   constructor(props){
     super(props)
-
+    this.state = {
+      music: 'https://open.spotify.com/embed?uri=spotify:user:fkigawa:playlist:'+this.props.playlist
+    }
   }
 
+  componentDidMount(){
+    console.log(this.state.music);
+  }
+//5kw7HlLGZUfzwPcV2YO44i
   render() {
     return (
       <div className="emotify">
@@ -18,7 +24,7 @@ class Playerpage extends React.Component {
           <div className="cart">
             <Animations2/>
             <div id="sidebar">
-              <iframe src="https://open.spotify.com/embed?uri=spotify:user:fkigawa:playlist:5kw7HlLGZUfzwPcV2YO44i" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe src={this.state.music} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
           </div>
         </div>

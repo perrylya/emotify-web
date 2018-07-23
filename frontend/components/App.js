@@ -13,6 +13,23 @@ class App extends React.Component {
     }
   }
 
+  getHashParams() {
+    var hashParams = {};
+    var e, r = /([^&;=]+)=?([^&;]*)/g,
+        q = window.location.hash.substring(1);
+    while ( e = r.exec(q)) {
+       hashParams[e[1]] = decodeURIComponent(e[2]);
+    }
+    return hashParams;
+  }
+
+  getURL(){
+    var url = window.location.href;
+    console.log(url);
+  }
+
+
+
   handleClick() {
     if(this.state.username === 'fkigawa' && this.state.password === 'emotify') {
       this.setState({loggedIn: !this.state.loggedIn})
@@ -32,6 +49,19 @@ class App extends React.Component {
     this.setState({password: event.target.value})
   }
 
+  componentDidMount(){
+    this.getURL();
+    let params = this.getHashParams();
+    console.log(params);
+    let state = this.state.loggedIn;
+    if(params.access_token){
+      this.setState({
+        loggedIn: !state
+      })
+    }
+  }
+
+
   render() {
     return (
       <div className="maincontent">
@@ -45,7 +75,7 @@ class App extends React.Component {
           <div className="emotify">
             <div>
                 <h1>EMOTIFY</h1>
-                <h3>Sign in with your Spotify account!</h3>
+                <h3>Sign in with your Spotify account</h3>
                 <form className="login">
                   <input placeholder="USERNAME" onChange={this.handleUsernameChange.bind(this)} value={this.state.username}></input>
                   <input type="password" placeholder="PASSWORD" onChange={this.handlePasswordChange.bind(this)} value={this.state.password} ></input>

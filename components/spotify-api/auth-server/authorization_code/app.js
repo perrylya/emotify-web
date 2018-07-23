@@ -131,7 +131,7 @@ app.get('/refresh_token', function(req, res) {
 });
 
 
-app.get('/getTrack', function(req, res) {
+app.get('/getTrack/:emotion', function(req, res) {
   var track;
   // use the access token to access the Spotify Web API
   request.get(options, function(error, response, body) {

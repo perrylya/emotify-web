@@ -136,21 +136,20 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-
-app.get('/getTrack', function(req, res) {
+app.get('/getTrack/:emotion', function(req, res) {
   var allTracks = [];
   var track = '';
-  var emotion = 'happy'
+  var emotion = req.params.emotion;
   request.get(options, function(error, response, body) {
-    console.log(response)
     for (var i = 0; i < response.body.items.length; i++) {
       if (emotion === response.body.items[i].name) {
         track = response.body.items[i].uri
       }
     }
 
-    var playList = track.slice(30)
-
+    var playlist = track.slice(30)
+    console.log(playlist);
+    res.send(playlist);
     // 5kw7HlLGZUfzwPcV2YO44i
 
     var newOptions = {

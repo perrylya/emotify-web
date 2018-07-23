@@ -65,7 +65,7 @@ app.post('/image/create', function(req,res){
 
     var apikey = 'PC5A7JaoKp7j0QNovkwN9IN1qXngPub0';
     var apisecret = '9ncn_uAkJaWx2rQFWVZrxP3kfUZiONHn'
-    var image = 'http://9097fc70.ngrok.io/pic.jpg';
+    var image = 'http://c63c6698.ngrok.io/pic.jpg';
     var data = {};
     var url = `https://api-us.faceplusplus.com/facepp/v3/detect?api_key=${apikey}&api_secret=${apisecret}&image_url=${image}&return_attributes=emotion`
     axios.post(url).then(function(response){
